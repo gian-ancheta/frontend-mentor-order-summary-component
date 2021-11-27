@@ -1,0 +1,239 @@
+/*
+ *                  CONTENTS
+ * GENERIC
+ * ....custom properties
+ * ....box-sizing
+ * ....resets
+ * ....elements
+ *
+ * COMPONENTS
+ * ....card
+ * ....annual plan link
+ * ....buttons
+ *
+ * LAYOUT
+ * ....grid-center
+ *
+ * CLASSES
+ * ....backgrounds
+ * ....colors
+ * ....font
+ * ....text layout
+ * ....margins
+ * ....size
+ *
+ */
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*\
+    #GENERIC 
+\*----------------------------*/
+
+/* #CUSTOM PROPERTIES */
+html {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --regular: 500;
+    --bold: 700;
+    --bolder: 900;
+    --mobile: 375px;
+    --desktop: 1440px;
+}
+
+
+
+
+
+/* #BOX-SIZING */
+html                   { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit;    }
+
+
+
+
+
+/* #RESETS */
+* { margin: 0; padding: 0; }
+
+
+
+
+
+/* #ELEMENTS */
+html { font: var(--regular) 16px 'Red Hat Display', sans-serif; }
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*\
+    #COMPONENTS
+\*----------------------------*/
+
+/* #CARD */
+.card {
+    max-width: calc(0.9 * var(--mobile));
+    background-color: white;
+    background-image: url(./images/illustration-hero.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 1rem;
+    padding-top: 10rem;
+}
+
+.card__heading {
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    font-weight: var(--bolder);
+    text-align: center;
+}
+
+.card__description {
+    color: var(--desaturated-blue);
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+
+
+
+/* #ANNUAL PLAN LINK */
+.annual-plan-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(./images/icon-music.svg);
+    background-color: var(--very-pale-blue);
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    width: 90%;
+}
+
+.change-link       { font-weight: var(--bold);           }
+.change-link:hover { color: hsla(245, 75%, 52%, 0.75); }
+
+
+
+
+
+/* #BUTTONS */
+.button {
+    display: block;
+    font-size: 1rem;
+    font-weight: var(--bold);
+    width: 90%;
+    margin: 0 auto;
+    border: 0px;
+    border-radius: 0.8rem;
+    padding: 1rem;
+}
+
+.button--proceed { 
+    background-color: var(--bright-blue); 
+    color: white;
+    box-shadow: 0px 20px 20px 0px hsl(225, 100%, 94%);
+}
+
+.button--cancel { 
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--desaturated-blue);
+}
+
+.button--proceed:hover { background-color: hsla(245, 75%, 52%, 0.75); }
+.button--cancel:hover { color: var(--dark-blue); }
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*\
+    #LAYOUT
+\*----------------------------*/
+
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------*\
+    #CLASSES
+\*----------------------------*/
+
+/* #BACKGROUNDS */
+.background-color-pale-blue { background-color: var(--pale-blue); }
+
+
+
+
+
+/* #COLORS */
+.color-desaturated-blue { color: var(--desaturated-blue); }
+.color-dark-blue        { color: var(--dark-blue);        }
+
+
+
+
+
+/* #FONT */
+.font-weight-bold { font-weight: var(--bold); }
+
+
+
+
+
+/* #TEXT LAYOUT*/
+.text-align-center { text-align: center; }
+
+
+
+
+
+/* #MARGINS */
+.margin-bottom-1rem   { margin-bottom: 1rem;   }
+.margin-bottom-1-5rem { margin-bottom: 1.5rem; }
+.margin-top-2rem      { margin-top:    2rem;   }
+.margin-left-4rem     { margin-left:   4rem;   }
+
+
+
+
+
+/* #SIZE */
+.size-viewport {
+    width: 100vw;
+    height: 100vh;
+}
